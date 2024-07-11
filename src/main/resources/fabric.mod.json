@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "minigame",
+	"version": "${version}",
+	"name": "Minigame",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://github.com/PublicCode1337",
+		"sources": "https://github.com/PublicCode1337/FabricMinigame"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/minigame/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"de.publiccode.Minigame"
+		],
+		"client": [
+			"de.publiccode.MinigameClient"
+		]
+	},
+	"mixins": [
+		"minigame.mixins.json",
+		{
+			"config": "minigame.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
